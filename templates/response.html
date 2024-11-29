@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <title>imagechatbot.ai</title>
+  </head>
+  <body>
+    
+    <header>
+      <h1>IMAGE CHATBOT</h1>
+      <div class="side-header">
+        <a href="/newchat"><button class="side-header1">New Chat</button></a>
+        
+      </div>
+    </header>
+     
+    <main>
+      
+      <div class="chat-container"> 
+        <div class="chat-output-container" id="chatOutput">
+            {% for msg in messages %}
+          <div class="chat-output" >
+            <div class="question">
+              
+              <h3>{{ msg.question }}</h3>
+            </div>
+            <div class="answer">
+              <h4>{{ msg.response }}</h4>
+            </div>
+                       
+          </div>
+          {% endfor %}
+        </div>           
+        <div class="chat-input-container">
+          <div id="image-preview" class="image-preview"></div>
+          <div class="chat-input">
+            <form id="myForm" action="/chat" method="post" enctype="multipart/form-data">
+              
+              <input type="text" name="question" class="chat-input"  autofocus  placeholder="Type a message..." >
+              
+            </form>
+          </div>
+          <div class="chat-actions">
+            
+            <button form="myForm" class="chat-button tooltip chat-button-tooltip" type="submit">
+              <span aria-hidden="true">➤</span>
+              <span class="tooltiptext">Send message</span>
+            </button>
+          </div>
+        </div>   
+      </div>
+    </main>
+    <script src="../static/js/script.js"></script>
+
+  </body>
+</html>
