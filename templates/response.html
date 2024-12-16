@@ -4,26 +4,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
-    <title>imagechatbot.ai</title>
+    <title>Interviewbot</title>
   </head>
   <body>
     
     <header>
-      <h1>IMAGE CHATBOT</h1>
+      <h1>INTERVIEW CHATBOT</h1>
       <div class="side-header">
-        <a href="/newchat"><button class="side-header1">New Chat</button></a>
+        <a href="/newchat"><button class="side-header1">New Session</button></a>
         
       </div>
     </header>
      
     <main>
-      
-      <div class="chat-container"> 
+      <div class="chat-header">
+        <div class="chat-container"> 
         <div class="chat-output-container" id="chatOutput">
             {% for msg in messages %}
           <div class="chat-output" >
             <div class="question">
-              
               <h3>{{ msg.question }}</h3>
             </div>
             <div class="answer">
@@ -32,9 +31,9 @@
                        
           </div>
           {% endfor %}
-        </div>           
+        </div>
+        </div>          
         <div class="chat-input-container">
-          <div id="image-preview" class="image-preview"></div>
           <div class="chat-input">
             <form id="myForm" action="/chat" method="post" enctype="multipart/form-data">
               

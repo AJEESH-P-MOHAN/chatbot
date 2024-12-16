@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <title>Interviewbot</title>
+  </head>
+  <body>
+
+    <nav class="navbar">
+        <p class="brand">INTERVIEW CHATBOT</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="/index">Start</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+     
+    <main style="background:white">
+        <div class="abvheading" id="home" >
+            <h2></h2>
+            <h5></h5>
+        </div>
+        
+        <div class="heading" >
+            <h2>Welcome to Virtual Interview</h2>
+            <h5>"Start Your Journey to Success with a Virtual Interview Simulation..."</h5>
+        </div>
+        <div class="home">
+            <div class="home-header img">
+                <a href="index.html">
+                    <img src="/static/Images/interviewbot.jpg" alt="chatbot image">
+                </a>
+            </div>
+        </div>
+        <div class="home" id="about">
+            <div class="home-header">
+                <h3>INTERVIEWBOT</h3>
+                <h5>1. Mission Statement</h5>
+                <h4>"At InterviewBot, our mission is to empower job seekers by providing a realistic, interactive mock interview experience. Whether you're a student preparing for your first interview or a professional looking to refine your skills, we aim to help you succeed in a competitive job market."</h4>
+                <h5>2. Features</h5>
+                <h4><b>Interactive Experience: </b>Engage with a chatbot that mimics a real interviewer, asking industry-relevant and tailored questions.<br><b>Field-Specific Scenarios: </b>Choose from areas like web development, UI/UX design, testing, or data science to practice your specific expertise.<br><b>Real-Time Feedback: </b>Receive immediate feedback to understand your strengths and areas for improvement.</h4>
+                <h5>3. How It Works</h5>
+                <h4>"InterviewBot uses advanced AI models to simulate interview questions tailored to your field of interest. Users can interact with the bot by choosing a domain, answering questions, and receiving feedback to refine their approach."</h4>
+                <h5>4. Key Benefits</h5>
+                <h4><li>Boosts critical thinking.</li><li>critical thinking.</li><li>Improves interview etiquette.</li><li>Provides insights into real-world interview scenarios.</li></h4>
+            </div>
+        </div>
+
+        <section id="contact" >
+            <div class="contact-header" >
+                <h2>Contact Us</h2>
+                <p>We would love to hear from you! Feel free to reach out with your feedback</p>
+            </div>
+            <div class="contact-form">
+                <form action="/submit" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; InterviewBot. All rights reserved.</p>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </p>
+    </footer>
+  </body>
+</html>

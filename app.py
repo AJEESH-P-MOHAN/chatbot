@@ -1,9 +1,6 @@
 from flask import Flask, request, render_template, send_file, jsonify, session, url_for
 import ollama
 import os
-from werkzeug.utils import secure_filename
-
-
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Generates a random 24-byte string
@@ -18,9 +15,12 @@ def new_chat():
 
 # Define a route for the home page
 @app.route("/")
+def main():
+    return render_template("main.html")
+
+@app.route("/index")
 def index():
     return render_template("index.html")
-
 
 # Define a route for handling questions (chatting)
 @app.route("/chat", methods=["POST"])
@@ -63,7 +63,6 @@ def chat():
             'question': question,
             'response': str(e)
         }
-        
         
         # Initialize the messages list in the session if it doesn't exist
         if 'messages' not in session:
